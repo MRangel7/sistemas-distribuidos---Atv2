@@ -1,0 +1,19 @@
+Qual é a diferença entre HTTP e REST? HTTP é o protocolo que define requisições e respostas. REST é um estilo arquitetural que organiza essas interações usando recursos, URIs, interface uniforme e comunicação stateless.  
+
+Quais são os principais componentes de uma requisição HTTP? São método, URI, headers e body. O método indica a operação, a URI identifica o recurso, os headers carregam metadados e o body transporta dados.  
+
+Por que códigos de status fazem parte do contrato de uma API? Porque permitem ao cliente identificar a categoria do resultado sem precisar interpretar o texto do corpo da resposta.  
+
+Qual é a diferença entre recurso e sua representação JSON? O recurso é uma entidade com significado no sistema, como um pedido. O JSON é um formato usado para representar seus dados durante a transmissão.  
+
+Por que statelessness pode facilitar escalabilidade horizontal? Porque cada requisição contém o necessário para ser processada, sem depender da memória de uma instância específica. Assim, as requisições podem ser distribuídas entre várias réplicas.  
+
+O que significa comunicação síncrona entre Pedidos e Estoque? Significa que Pedidos chama Estoque e aguarda sua resposta para continuar a operação.  
+
+Por que uma chamada REST continua sujeita aos problemas da Aula 2? Porque HTTP usa a rede e, portanto, as requisições continuam sujeitas a latência, indisponibilidade e perda de pacotes.  
+
+O que significa idempotência? Dê um exemplo. É quando repetir uma operação produz o mesmo efeito final que executá-la uma vez. Exemplo: DELETE /pedidos/10.  
+
+Por que um timeout não prova que a operação remota não foi executada? Porque o cliente pode ter parado de esperar enquanto a operação já havia sido executada, mas a resposta não chegou a tempo.  
+
+Que problemas surgem com cinco chamadas HTTP sequenciais? Aumentam a latência e o acoplamento temporal, pois a lentidão ou falha de um serviço pode afetar toda a operação. 
